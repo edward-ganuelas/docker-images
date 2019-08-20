@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    image: epganuelas/edward-g.me:latest
+    ports:
+      - "8181:80"
