@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    image: epganuelas/directus_client:latest
+    ports:
+      - "8383:80"
+    environment:
+      HOST: 0.0.0.0
