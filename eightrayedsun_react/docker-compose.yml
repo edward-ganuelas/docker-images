@@ -1,8 +1,8 @@
 version: '3'
 services:
   web:
-    image: epganuelas/pokedex_project:latest
+    image: epganuelas/eightrayedsun_react:latest
     ports:
-      - "8282:80"
+      - "8484:80"
     environment:
       HOST: 0.0.0.0
