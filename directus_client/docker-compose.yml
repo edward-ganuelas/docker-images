@@ -6,4 +6,3 @@ services:
       - "8383:80"
     environment:
       HOST: 0.0.0.0
-      - VUE_APP_APIHOST=https://directus.eightrayedsun.com
