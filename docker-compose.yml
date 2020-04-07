@@ -1,0 +1,26 @@
+version: '3'
+services:
+    edward-g:
+        image: epganuelas/edward-g.me:latest
+        ports:
+            - "8181:80"
+        environment:
+            HOST: 0.0.0.0
+    pokedex:
+        image: epganuelas/pokedex_project:latest
+        ports:
+            - "8282:80"
+        environment:
+            HOST: 0.0.0.0
+    directus:
+        image: epganuelas/directus-client:latest
+        ports:
+            - "8383:80"
+        environment:
+            HOST: 0.0.0.0
+    eighray:
+        image: epganuelas/eightrayedsun_react:latest
+        ports:
+            - "8484:80"
+        environment:
+            HOST: 0.0.0.0
