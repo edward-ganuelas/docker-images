@@ -41,3 +41,16 @@ services:
             DIRECTUS_DATABASE_NAME: "directus7"
             DIRECTUS_DATABASE_USERNAME: "directus"
             DIRECTUS_DATABASE_PASSWORD: "OiPtiTn2P^1zYONc3WaxPiL&n42ZNw"
+        links: 
+            "mysql:db"
+    db:
+        image: mariadb
+        environment:
+            MYSQL_DATABASE: "directus7"
+            MYSQL_USER: "directus"
+            MYSQL_PASSWORD: "OiPtiTn2P^1zYONc3WaxPiL&n42ZNw"
+            MYSQL_ROOT_PASSWORD: "directus"
+        ports:
+            - "3306:3306"
+        volumes: 
+            - "/db/data/":/var/lib/mysql/
