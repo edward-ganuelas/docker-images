@@ -28,6 +28,8 @@ services:
         image: directus/directus:v8-apache
         ports:
             - "8585:80"
+        extra_hosts: 
+            - "internalhost:159.203.24.66"
         environment:
             HOST: internalhost
             DIRECTUS_APP_ENV: "production"
@@ -39,5 +41,3 @@ services:
             DIRECTUS_DATABASE_NAME: "directus7"
             DIRECTUS_DATABASE_USERNAME: "directus"
             DIRECTUS_DATABASE_PASSWORD: "OiPtiTn2P^1zYONc3WaxPiL&n42ZNw"
-extra_hosts: 
-    - "internalhost:localhost"
