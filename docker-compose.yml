@@ -29,13 +29,15 @@ services:
         ports:
             - "8585:80"
         environment:
-            HOST: 172.18.0.1
+            HOST: internalhost
             DIRECTUS_APP_ENV: "production"
             DIRECTUS_AUTH_PUBLICKEY: "af2d8b11-8528-4e5a-abe7-c988495424cb"
             DIRECTUS_AUTH_SECRETKEY: "1rTdTG0fPSAtpOfabJ8vUuZIHEQABNWN"
             DIRECTUS_DATABASE_TYPE: "mysql"
-            DIRECTUS_DATABASE_HOST: "172.18.0.1"
+            DIRECTUS_DATABASE_HOST: "localhost"
             DIRECTUS_DATABASE_PORT: "3306"
             DIRECTUS_DATABASE_NAME: "directus7"
             DIRECTUS_DATABASE_USERNAME: "directus"
             DIRECTUS_DATABASE_PASSWORD: "OiPtiTn2P^1zYONc3WaxPiL&n42ZNw"
+extra_hosts: 
+    - "internalhost:localhost"
