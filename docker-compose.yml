@@ -28,6 +28,8 @@ services:
         image: directus/directus:v8-apache
         ports:
             - "8585:80"
+        networks: 
+            directus
         environment:
             HOST: 0.0.0.0
             DIRECTUS_APP_ENV: "production"
@@ -39,3 +41,6 @@ services:
             DIRECTUS_DATABASE_NAME: "directus7"
             DIRECTUS_DATABASE_USERNAME: "directus"
             DIRECTUS_DATABASE_PASSWORD: "OiPtiTn2P^1zYONc3WaxPiL&n42ZNw"
+networks: 
+    directus:
+        driver: HOST
