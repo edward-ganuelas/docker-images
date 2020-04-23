@@ -28,7 +28,6 @@ services:
         image: directus/directus:v8-apache
         ports:
             - "8585:80"
-        network_mode: "HOST"
         environment:
             HOST: 0.0.0.0
             DIRECTUS_APP_ENV: "production"
