@@ -2,24 +2,28 @@ version: '3'
 services:
     edward-g:
         image: epganuelas/edward-g.me:latest
+        restart: unless-stopped
         ports:
             - "8181:80"
         environment:
             HOST: 0.0.0.0
     pokedex:
         image: epganuelas/pokedex_project:latest
+        restart: unless-stopped
         ports:
             - "8282:80"
         environment:
             HOST: 0.0.0.0
     directus:
         image: epganuelas/directus-client:latest
+        restart: unless-stopped
         ports:
             - "8383:80"
         environment:
             HOST: 0.0.0.0
     eighray:
         image: epganuelas/eightrayedsun_react:latest
+        restart: unless-stopped
         ports:
             - "8484:80"
         environment:
